@@ -5,7 +5,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      listings: ['listing 1', 'listing 2']
+      listings: ['listing 1', 'listing 2'],
+      trendingItems: ['ps4', 'xbox1', 'nintendo switch']
     }
   }
 
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Search />
         <Listings value={this.state.listings} />
       </div>
     );
@@ -52,6 +54,14 @@ function Header () {
     <Navbar />
     </div> 
   )
+}
+
+class Search extends Component {
+  render() {
+    return (
+      <input className="search" placeholder="search elmashro3, live lavishly"/>
+    )
+  }
 }
 
 export default App;

@@ -1,38 +1,53 @@
 .App {
-  text-align: center;
+ 
 }
 
-.Navbar {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  border: 1px solid blue;
-  width: 40%; 
-  background-color:gold;
-  padding-left: 0px;
 
-}
-
-a {
-  color: #0060B6;
-  text-decoration: none;
-}
-
-a:hover 
-{
-   color:#00A0C6; 
-   text-decoration:none; 
-   cursor:pointer;  
-}
 
 /* Header */
 
 .logo-title {
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+
+/* Nav */
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 60%; 
+  padding-left: 0px;
+  font-size:14px;
+}
+
+li,a {
+  text-decoration: none; 
+}
+
+
+a:hover 
+{
+   color:#00A0C6; 
+   cursor:pointer;  
+}
+
+/* Search */
+
+.search {
+  width: 70%;
+  display: block;
+  border-radius: 10px;
+  margin: 0px auto;
+  padding: 5px;
+  font-size: 14px; 
+  border: solid rgb(238, 206, 44);
 }
