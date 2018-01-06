@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 
 class App extends Component {
@@ -12,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
         <Header />
         <Listings value={this.state.listings} />
       </div>
@@ -45,10 +44,13 @@ class Navbar extends Component {
 
 function Header () {
   return (
-    <section className="Header">
+    <div className ="header">
+    <section className="logo-title">
       <h1>elmashro3</h1>
       <i>the worlds first open market</i>
     </section>
+    <Navbar />
+    </div> 
   )
 }
 
