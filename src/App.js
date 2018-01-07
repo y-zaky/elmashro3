@@ -5,7 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      listings: ['listing 1', 'listing 2', 'listing 3', 'listing 4', 'listing 5', 'listing 6', 'listing 7', 'listing 8'],
+      listings: [{title: 'listing 1', image:'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg', description:'you should buy this'}, 'listing 2', 'listing 3', 'listing 4', 'listing 5', 'listing 6', 'listing 7', 'listing 8'],
       trendingItems: ['ps4', 'xbox1', 'nintendo switch']
     }
   }
@@ -28,7 +28,12 @@ class Listing extends Component {
   render() {
     return (
         this.props.value.map((listing, index) => {
-          return (<div class="listing" key={index}>{listing}</div>)
+          return (
+            <div className="listing" key={index}>
+              {listing.title}
+              <img src={listing.img}/>
+              {listing.description}
+            </div>)
         })
     );
   }
@@ -63,14 +68,14 @@ function Search () {
     return (
       <section className = "search-container">
         <input className="search" placeholder="search elmashro3, live lavishly"/>
-        <CategoriesDropdown class="categories-dropdown" />
+        <CategoriesDropdown className="categories-dropdown" />
       </section>
     )
 }
 
 function CategoriesDropdown () {
   return (
-    <button class ="categories-dropdown">Categories</button>
+    <button className ="categories-dropdown">Categories</button>
     
   )
 }
