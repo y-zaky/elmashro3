@@ -9,12 +9,24 @@
 .logo-title {
   text-align: left;
   font-size: 14px;
+
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-duration: 1s;
+
+  animation-name: spinner;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 2;
+  animation-duration: 1s;
+
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
+
 }
 
 
@@ -51,3 +63,23 @@ a:hover
   font-size: 14px; 
   border: solid rgb(238, 206, 44);
 }
+
+  /* WebKit and Opera browsers */
+  @-webkit-keyframes spinner {
+    from { -webkit-transform: rotateY(0deg);    }
+    to   { -webkit-transform: rotateY(-360deg); }
+  }
+
+  /* all other browsers */
+  @keyframes spinner {
+    from {
+      -moz-transform: rotateX(0deg);
+      -ms-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+    }
+    to {
+      -moz-transform: rotateX(-360deg);
+      -ms-transform: rotateX(-360deg);
+      transform: rotateX(-360deg);
+    }
+  }
