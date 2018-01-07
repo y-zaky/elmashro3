@@ -5,7 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      listings: ['listing 1', 'listing 2'],
+      listings: ['listing 1', 'listing 2', 'listing 3', 'listing 4', 'listing 5', 'listing 6', 'listing 7', 'listing 8'],
       trendingItems: ['ps4', 'xbox1', 'nintendo switch']
     }
   }
@@ -15,19 +15,21 @@ class App extends Component {
       <div className="App">
         <Header />
         <Search />
-        <Listings value={this.state.listings} />
+        <section className = "listings-container">
+          <Listing value={this.state.listings} />
+        </section>
       </div>
     );
   }
 }
 
 
-class Listings extends Component {
+class Listing extends Component {
   render() {
     return (
-      this.props.value.map((listing, index) => {
-        return (<p key={index}>{listing}</p>)
-      })
+        this.props.value.map((listing, index) => {
+          return (<div class="listing" key={index}>{listing}</div>)
+        })
     );
   }
 }
@@ -37,8 +39,9 @@ class Navbar extends Component {
     return (
       <ul className="Navbar">
         <li><a href='#'>How it Works</a></li>
-        <li><a href='#'>Sell an item</a></li>
+        <li><a href='#'>Sell</a></li>
         <li><a href='#'>Sign Up</a></li>
+        <li><a href='#'>My Basket</a></li>
       </ul>
     )
   }
