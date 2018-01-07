@@ -59,12 +59,20 @@ function Header () {
   )
 }
 
-class Search extends Component {
-  render() {
+function Search () {
     return (
-      <input className="search" placeholder="search elmashro3, live lavishly"/>
+      <section className = "search-container">
+        <input className="search" placeholder="search elmashro3, live lavishly"/>
+        <CategoriesDropdown class="categories-dropdown" />
+      </section>
     )
-  }
+}
+
+function CategoriesDropdown () {
+  return (
+    <button class ="categories-dropdown">Categories</button>
+    
+  )
 }
 
 export default App;
