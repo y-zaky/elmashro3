@@ -44,12 +44,16 @@
 
 a {
   text-decoration: none;
-  display: inline-block;
+  display: block;
 }
 
+/* a:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+} */
 
- a:hover{
-   background-color: rgba(0, 0, 0, 0.2);
+
+ li >a:hover{
+    background-color: rgba(0, 0, 0, 0.2);
    cursor: pointer;  
    transition: all 0.3s ease 0s;
    transform: translateY(-5px); ;
