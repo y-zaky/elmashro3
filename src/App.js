@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
+import {StuffList} from './StuffList'
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
         <section className = "listings-container">
           <Listing value={this.state.listings} />
         </section>
+        <StuffList />
       </div>
     );
   }
