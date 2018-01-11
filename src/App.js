@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import {StuffList} from './StuffList'
+import StuffList from './StuffList';
 
 class App extends Component {
   constructor(props) {
