@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -31,7 +32,7 @@ class Listing extends Component {
           return (
             <div className="listing" key={index}>
               {listing.title}
-              <img src={listing.img}/>
+              <img alt="listing" src={listing.img}/>
               {listing.description}
             </div>)
         })
@@ -42,12 +43,17 @@ class Listing extends Component {
 class Navbar extends Component {
   render() {
     return (
+  
       <ul className="Navbar">
-        <li><a href='#'>How it Works</a></li>
-        <li><a href='#'>Sell</a></li>
+        <li><Link to ="/">Home</Link></li>
+        <li><Link to ="/how-it-works">How it Works</Link></li>
+        {/* <li><a href='/sell'>Sell</a></li>
         <li><a href='#'>Sign Up</a></li>
-        <li><a href='#'>My Basket</a></li>
+        <li><a href='#'>My Basket</a></li> */}
+        <h1>thing here</h1>
+        <Route path="/how-it-works" component={Headernew}/>
       </ul>
+ 
     )
   }
 }
@@ -63,6 +69,16 @@ function Header () {
     </div> 
   )
 }
+
+function Headernew () {
+  return (
+    <div className ="headernew">
+   <h1>hi m8</h1>
+    </div> 
+  )
+}
+
+
 
 function Search () {
     return (
