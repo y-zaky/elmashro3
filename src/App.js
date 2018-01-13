@@ -47,11 +47,11 @@ class Navbar extends Component {
       <ul className="Navbar">
         <li><Link to ="/">Home</Link></li>
         <li><Link to ="/how-it-works">How it Works</Link></li>
-        {/* <li><a href='/sell'>Sell</a></li>
-        <li><a href='#'>Sign Up</a></li>
-        <li><a href='#'>My Basket</a></li> */}
+        <li><Link to='/sell'>Sell</Link></li>
+        <li><Link to='/signup'>Sign Up</Link></li>
+        <li><Link to='/basket'>Basket</Link></li>
         <h1>thing here</h1>
-        <Route path="/how-it-works" component={Headernew}/>
+        <Route exact path="/how-it-works" component={Headernew}/>
       </ul>
  
     )
