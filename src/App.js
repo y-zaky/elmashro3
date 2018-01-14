@@ -1,7 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
-import StuffList from './StuffList';
+import StuffList from './components/StuffList';
+import Listing from './components/listing';
+import Navbar from './components/navbar';
+import Search from './components/search';
+import Header from './components/header'
 
 class App extends Component {
   constructor(props) {
@@ -24,78 +27,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-
-class Listing extends Component {
-  render() {
-    return (
-        this.props.value.map((listing, index) => {
-          return (
-            <div className="listing" key={index}>
-              {listing.title}
-              <img alt="listing" src={listing.img}/>
-              {listing.description}
-            </div>)
-        })
-    );
-  }
-}
-
-class Navbar extends Component {
-  render() {
-    return (
-  
-      <ul className="Navbar">
-        <li><Link to ="/">Home</Link></li>
-        <li><Link to ="/how-it-works">How it Works</Link></li>
-        <li><Link to='/sell'>Sell</Link></li>
-        <li><Link to='/signup'>Sign Up</Link></li>
-        <li><Link to='/basket'>Basket</Link></li>
-        <h1>thing here</h1>
-        <Route exact path="/how-it-works" component={Headernew}/>
-      </ul>
- 
-    )
-  }
-}
-
-function Header () {
-  return (
-    <div className ="header">
-    <section className="logo-title">
-      <h1>elmashro3</h1>
-      <i>the worlds first open market</i>
-    </section>
-    <Navbar />
-    </div> 
-  )
-}
-
-function Headernew () {
-  return (
-    <div className ="headernew">
-   <h1>hi m8</h1>
-    </div> 
-  )
-}
-
-
-
-function Search () {
-    return (
-      <section className = "search-container">
-        <input className="search" placeholder="search elmashro3, live lavishly"/>
-        <CategoriesDropdown className="categories-dropdown" />
-      </section>
-    )
-}
-
-function CategoriesDropdown () {
-  return (
-    <button className ="categories-dropdown">Categories</button>
-    
-  )
 }
 
 export default App;
