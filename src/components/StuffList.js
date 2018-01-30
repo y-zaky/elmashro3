@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class suffList extends React.Component {  
+class StuffList extends React.Component {  
   
   render() {
     return (
@@ -14,4 +14,4 @@ class suffList extends React.Component {
 
 
 
-export default suffList;
+export default StuffList;
