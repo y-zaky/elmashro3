@@ -1,4 +1,4 @@
-// swtich statement here takes state, and action 
+// swtich statement here takes state, and action. Below is initial state.
 const state = {
   listings: [{title: 'listing 1', image:'https://upload.wikimedia.org/wikipedia/commons/f/f9/Phoenicopterus_ruber_in_S%C3%A3o_Paulo_Zoo.jpg', description:'you should buy this'}, 'listing 2', 'listing 3', 'listing 4', 'listing 5', 'listing 6', 'listing 7', 'listing 8'],
   trendingItems:[] 
