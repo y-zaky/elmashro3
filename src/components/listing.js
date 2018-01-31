@@ -9,6 +9,7 @@ class Listing extends Component {
               {listing.title}
               <img alt="listing" src={listing.img}/>
               {listing.description}
+              <button>Add to trending</button>
             </div>)
         })
     );
